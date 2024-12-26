@@ -8,8 +8,45 @@
 <body>
     <script>
         // Get the input element
-        var input = document.getElementById("input");
-        
+        var input = parseInt(prompt('Enter a number'));
+        var l=(''+input).length;
+        document.write('no of digits '+l)
+        document.write('<br>')
+        var password=''
+        for (var i=l;i>0;i--){
+            var c=10**i
+            x=parseInt(input*10/c)-parseInt(input/c)*10
+            document.write(x)
+            switch(x){
+                case 0:
+                    password+="z"
+                    break;
+                case 1:
+                    password+="o"
+                    break;
+                case 2:
+                case 3:
+                    password+='t'
+                    break;
+                case 4:
+                case 5:
+                    password+='f'
+                    break;
+                case 6:
+                case 7:
+                    password+='s'
+                    break;
+                case 8:
+                    password+='e'
+                    break;
+                case 9:
+                    password+='n'
+                    break;
+                }
+            document.write('->'+password+'<br>');
+
+        }
+        document.write('<br>'+password);
     </script>
 </body>
 </html>
