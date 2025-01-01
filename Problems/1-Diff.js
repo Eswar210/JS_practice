@@ -97,32 +97,9 @@ function changeColor() {
         // Add an event listener to the button
         document.getElementById("button").addEventListener("click", changeColor);
 
-                       
-// 29. write a javascript program to implement promises for even numbers, if number is even fulfill the promise and it is odd reject the promise
-function isEven(num) {
-    return new Promise((resolve, reject) => {
-        if (num % 2 == 0) {
-            resolve(num);
-            }
-            else {
-                reject(num);
-                }
-                });
-                }
-                // Test the function
-                isEven(10).then(num => console.log(num)).catch(num => console.log(num));
-                isEven(11).then(num => console.log(num)).catch(num => console.log(num));
-
+          
                         
-// 30. write a javascript program to perform addition of n numbers using single function in js
-function addNumbers(n) {
-    let sum = 0;
-    for (let i = 1; i <= n; i++) {
-        sum += i;
-        }
-        return sum;
-    }
-                        
+                  
                         
 // 31. Given an array of objects representing students, use the map method to create a new array of objects where each object has an additional property isAdult that is true if the student's age is 18 or above, and false otherwise.      
 // students = [

@@ -5,4 +5,5 @@ var arr = [1, 2, 3, 4, 5];
 console.log(arr.map(num => {
     let f=1;
     for (let i=1;i<=num;i++) f *= i;
-    return f;}));
+    return f;
+}));
