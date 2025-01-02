@@ -11,4 +11,10 @@
 //   { name: 'Jack', age: 19, isAdult: true }
 // ]
 
-let adult=(s)=>new Promise((res,rej)=>{s.age>17?res()})
+let students = [
+    { name: 'John', age: 17 },
+    { name: 'Jane', age: 19 },
+    { name: 'Jack', age: 18 },
+  ];
+console.log(students.map(s=>({...s,isAdult:s.age>17})));
+  
