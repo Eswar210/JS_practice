@@ -1,0 +1,1 @@
+str=str.slice(i)+'*'+str.slice(i+1);

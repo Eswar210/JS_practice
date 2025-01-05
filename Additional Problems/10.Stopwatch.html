@@ -1,0 +1,37 @@
+<!--10. Write a JavaScript program to implement a basic stopwatch using setInterval. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="start" onclick="st()">Start</button>
+    <button id="stop" onclick="sp()">Stop</button>
+    <button id="reset" onclick="rt()">Reset</button>
+    <p id="d">00:00:00:00</p>
+    <script>
+        var time=0,interval;
+        var st=()=>{
+            interval=setInterval(() => {
+                time++;
+                var hours=Math.floor(time/360000);
+                var minutes=Math.floor((time/6000)%60);
+                var seconds=Math.floor((time / 100) % 60);
+                var ms = time % 1000;
+                document.getElementById("d").innerHTML=padZero(hours)+":"+padZero(minutes)+":"+padZero(seconds)+':'+(ms);
+            }, 0);
+        }
+        var sp=()=>{clearInterval(interval);}
+        var rt=()=>{
+            clearInterval(interval);
+            document.getElementById("d").innerHTML="00:00:00";
+            }
+            function padZero(num){
+                return (num < 10 ? '0' : '') + num;
+                }
+
+    </script>
+</body>
+</html>
